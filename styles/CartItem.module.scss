@@ -1,0 +1,33 @@
+.boxStyle {
+    display: flex;
+    width: 100%;
+    margin: .4rem;
+
+    .imageStyle {
+        object-fit: contain;
+    }
+
+    .contentStyle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 140px;
+        width: 100%;
+        
+
+        .priceStyle {
+            display: flex;
+        }
+
+        .cartStyle {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-right: 10px;
+
+            .btnStyle{
+                margin: 5px;
+            }
+        }
+    }
+}

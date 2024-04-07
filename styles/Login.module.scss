@@ -1,0 +1,26 @@
+.container{
+    width: 50%;
+    background-color: lightgray;
+    margin: 1rem auto;
+    
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        min-height: 70vh;
+        margin: 1rem auto;
+    
+        .inputStyle {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            margin: 1rem;
+            outline: none;
+        }
+    
+        .submit{
+            margin: 1rem;
+        }
+    }
+}

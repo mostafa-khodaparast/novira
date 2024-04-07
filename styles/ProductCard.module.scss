@@ -1,0 +1,77 @@
+.linkStyle {
+    text-decoration: none;
+
+    .cardStyle {
+        padding: .2rem 1rem;
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 5px 5px 5px gray;
+        }
+
+        .cardImage {
+            object-fit: contain;
+            align-self: center;
+            padding-top: 1rem;
+        }
+
+        .cardContentStyle {
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            justify-content: space-between;
+            font-weight: bold;
+
+            .cardTitle {
+                font-weight: bold;
+                height: 50px;
+                overflow: hidden;
+            }
+
+            .cardPrice {
+                color: gray;
+                height: 50px;
+                width: 70px;
+                display: flex;
+                align-items: center;
+
+                .price {
+                    padding-left: 3px;
+                }
+            }
+
+            .rateStyle {
+                font-weight: bold;
+                color: gray;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 20px;
+
+
+                .rate {
+                    display: flex;
+                    align-items: end;
+
+                    .rateText {
+                        padding-left: 3px;
+                    }
+                }
+
+                .category {
+                    display: flex;
+                    align-items: end;
+
+                    .categoryText {
+                        padding-left: 3px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
