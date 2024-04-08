@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit"
+import { useSelector, TypedUseSelectorHook } from 'react-redux'
 import ecommerce from "./ecommerceSlice"
 import login from "./loginSlice"
-import { useSelector, TypedUseSelectorHook } from 'react-redux'
 
 
 export const store = configureStore({

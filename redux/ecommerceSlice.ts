@@ -1,5 +1,5 @@
-import { InitialStateProps, ProductProps, ShoppingCardProps } from "@/types"
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit"
+import { InitialStateProps, ProductProps, ShoppingCardProps } from "@/types"
 
 
 const initialState: InitialStateProps = {

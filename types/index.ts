@@ -29,8 +29,13 @@ export type InitialStateProps = {
 }
 
 
-export type LoginProps= {
+export type LoginProps = {
     isAuthenticated: boolean,
     token: string,
-    
+
+}
+
+export type LoginFormProps = {
+    username?: string,
+    password?: string
 }

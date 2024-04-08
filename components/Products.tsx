@@ -1,13 +1,15 @@
 "use client"
 
-import { fetchProducts } from "@/redux/ecommerceSlice"
-import { AppDispatch } from "@/redux/store"
-import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+
+import { AppDispatch,useAppSelector } from "@/redux/store"
+import { fetchProducts } from "@/redux/ecommerceSlice"
 import { ProductProps } from "@/types"
-import { useAppSelector } from "@/redux/store"
-import { Grid, Typography } from '@mui/material'
+//components
 import { ProductCard } from "."
+//styles
+import { Grid, Typography } from '@mui/material'
 
 
 

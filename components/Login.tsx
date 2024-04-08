@@ -1,20 +1,21 @@
 "use client"
 
-import { ErrorMessage } from "@hookform/error-message"
-import { Button, Card, Grid, Typography } from "@mui/material"
-import { useForm } from "react-hook-form"
-import styles from '@/styles/Login.module.scss'
-import { AppDispatch } from "@/redux/store"
-import { useDispatch } from 'react-redux'
-import toast from "react-hot-toast"
-import { login } from "@/redux/loginSlice"
 import { useRouter } from "next/navigation"
+import { useDispatch } from 'react-redux'
+
+import { useForm } from "react-hook-form"
+import { ErrorMessage } from "@hookform/error-message"
+import toast from "react-hot-toast"
+
+import { AppDispatch } from "@/redux/store"
+import { login } from "@/redux/loginSlice"
+import { fetchToken } from "@/actions"
+import { LoginFormProps } from "@/types"
+
+import { Button, Card, Grid, Typography } from "@mui/material"
+import styles from '@/styles/Login.module.scss'
 
 
-type LoginFormProps = {
-    username?: string,
-    password?: string
-}
 
 export default function Login() {
 
@@ -25,18 +26,18 @@ export default function Login() {
 
     let token: string = ''
 
+    const onsubmit = async (data: LoginFormProps) => {
 
-    const onsubmit = (data: LoginFormProps) => {
-        // fetch('https://fakestoreapi.com/auth/login', {
-        //     method: 'POST',
-        //     body: JSON.stringify({
-        //         username: "mor_2314",
-        //         password: "83r5^_"
-        //     })
-        // })
-        //     .then(res => res.json())
-        //     .then(json => token = json)
-        token = 'dfdfdfdfere'
+        //I don't know why post request is not working and I got below error:
+        //-->Unexpected token 'u', "username a"... is not valid JSON<--
+        //I test this address with postman and that was correct
+        //I don't know what is wrong with my code. So, I simulate fetching token to continue the login by adding lines 27 & 38
+        //So login form works with any username & password
+        //I would be very grateful if you mention my mistake
+        
+        //const token = await fetchToken(data.username as string, data.password as string)
+
+        token = 'eyJhbGciOiJIUzI1NiIsInR'
 
         if (token) {
             dispatch(login())
@@ -44,7 +45,6 @@ export default function Login() {
         } else {
             toast.error('Wrong credentials')
         }
-
     }
 
 

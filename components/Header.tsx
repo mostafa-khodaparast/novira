@@ -1,14 +1,17 @@
 "use client"
 
 import Link from "next/link"
-import LocalMallIcon from '@mui/icons-material/LocalMall'
-import HomeIcon from '@mui/icons-material/Home'
-import styles from '@/styles/Header.module.scss'
-import { Button } from "@mui/material"
-import { AppDispatch, useAppSelector } from "@/redux/store"
 import { useDispatch } from "react-redux"
-import { login, logout } from "@/redux/loginSlice"
+
+import { AppDispatch, useAppSelector } from "@/redux/store"
+import { logout } from "@/redux/loginSlice"
+//styles
+import { Button } from "@mui/material"
+import HomeIcon from '@mui/icons-material/Home'
 import InputIcon from '@mui/icons-material/Input'
+import LocalMallIcon from '@mui/icons-material/LocalMall'
+import styles from '@/styles/Header.module.scss'
+
 
 export default function Header() {
 

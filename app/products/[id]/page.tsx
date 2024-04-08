@@ -1,15 +1,16 @@
 "use client"
 
 import Image from "next/image"
-import { useAppSelector } from "@/redux/store"
 import { useDispatch } from 'react-redux'
-import { AppDispatch } from "@/redux/store"
+
+import { useAppSelector,AppDispatch } from "@/redux/store"
+import { decreaseItemQuantity, deleteItem, increaseItemQuantity } from "@/redux/ecommerceSlice"
+//styles
 import { Box, Button, Grid, Typography } from "@mui/material"
-import styles from '@/styles/ProductDetail.module.scss'
-import MonetizationOnRoundedIcon from '@mui/icons-material/MonetizationOnRounded'
 import StarIcon from '@mui/icons-material/Star'
 import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined'
-import { decreaseItemQuantity, deleteItem, increaseItemQuantity } from "@/redux/ecommerceSlice"
+import MonetizationOnRoundedIcon from '@mui/icons-material/MonetizationOnRounded'
+import styles from '@/styles/ProductDetail.module.scss'
 
 
 type ParamsProps = {

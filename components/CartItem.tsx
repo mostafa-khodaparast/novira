@@ -1,13 +1,14 @@
-import { useAppSelector } from "@/redux/store";
-import { ShoppingCardProps } from "@/types";
-import { Box, Button, Card, Typography } from "@mui/material";
-import MonetizationOnRoundedIcon from '@mui/icons-material/MonetizationOnRounded'
-import Image from "next/image";
+import Image from "next/image"
+import Link from "next/link"
 import { useDispatch } from 'react-redux'
-import { AppDispatch } from "@/redux/store"
+
+import { AppDispatch, useAppSelector } from "@/redux/store"
 import { decreaseItemQuantity, deleteItem, increaseItemQuantity } from "@/redux/ecommerceSlice"
+import { ShoppingCardProps } from "@/types"
+
+import { Box, Button, Card, Typography } from "@mui/material"
+import MonetizationOnRoundedIcon from '@mui/icons-material/MonetizationOnRounded'
 import styles from '@/styles/CartItem.module.scss'
-import Link from "next/link";
 
 
 

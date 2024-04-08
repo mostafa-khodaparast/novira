@@ -1,11 +1,13 @@
-import { ProductProps } from "@/types"
-import { Box, Card, CardContent, Typography, Grid } from '@mui/material'
-import styles from '@/styles/ProductCard.module.scss'
 import Image from "next/image"
-import MonetizationOnRoundedIcon from '@mui/icons-material/MonetizationOnRounded'
-import StarIcon from '@mui/icons-material/Star'
-import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined'
 import Link from "next/link"
+
+import { ProductProps } from "@/types"
+//styles
+import { Box, Card, CardContent, Typography, Grid } from '@mui/material'
+import StarIcon from '@mui/icons-material/Star'
+import MonetizationOnRoundedIcon from '@mui/icons-material/MonetizationOnRounded'
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined'
+import styles from '@/styles/ProductCard.module.scss'
 
 
 export default function ProductCard({ product }: { product: ProductProps }) {
